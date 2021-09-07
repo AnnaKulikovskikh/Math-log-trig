@@ -17,13 +17,13 @@ export default class MathChar extends Character {
 
   get attacker() {
     if (this.state) {
-      this.baseattack = Math.round(this.attack - Math.log2(5));
+      this.strike = Math.round(this.attack - Math.log2(5));
     }
-    this.baseattack = Math.round(this.attack - (this.attack * (this.distance - 1)) / 10);
-    return this.baseattack;
+    this.strike = Math.round(this.attack - (this.attack * (this.distance - 1)) / 10);
+    return this.strike;
   }
 
   set attacker(va) {
-    this.baseAttack = this.attack;
+    this.strike = this.attack;
   }
 }

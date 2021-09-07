@@ -19,5 +19,5 @@ test('distant attack', () => {
   const hero = new Magician('Strange');
   hero.distance = 3;
   hero.attacker;
-  expect(hero.baseattack).toBe(8);
+  expect(hero.strike).toBe(8);
 });

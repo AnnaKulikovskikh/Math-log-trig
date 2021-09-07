@@ -20,7 +20,7 @@ test('distant stoned attack', () => {
   hero.distance = 3;
   hero.stoned = true;
   hero.attacker;
-  expect(hero.baseattack).toBe(8);
+  expect(hero.strike).toBe(8);
 });
 
 test('stoned', () => {
