@@ -1,4 +1,3 @@
-import Character from '../character';
 import Daemon from '../daemon';
 
 test('creation daemon', () => {
@@ -21,11 +20,11 @@ test('distant stoned attack', () => {
   hero.distance = 3;
   hero.stoned = true;
   hero.attacker;
-  expect(hero.attack).toBe(6);
+  expect(hero.baseattack).toBe(8);
 });
 
 test('stoned', () => {
   const hero = new Daemon('Mimi');
   hero.stoned = true;
-  expect(hero.stoned).toBeTruthy;
+  expect(hero.stoned).toBeTruthy();
 });

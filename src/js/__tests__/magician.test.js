@@ -1,4 +1,3 @@
-import Character from '../character';
 import Magician from '../magician';
 
 test('creation magician', () => {
@@ -20,5 +19,5 @@ test('distant attack', () => {
   const hero = new Magician('Strange');
   hero.distance = 3;
   hero.attacker;
-  expect(hero.attack).toBe(8);
+  expect(hero.baseattack).toBe(8);
 });

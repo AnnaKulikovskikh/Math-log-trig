@@ -17,10 +17,10 @@ export default class MathChar extends Character {
 
   get attacker() {
     if (this.state) {
-      this.attack = Math.round(this.attack - Math.log2(5));
+      this.baseattack = Math.round(this.attack - Math.log2(5));
     }
-    this.attack = Math.round(this.attack - (this.attack * (this.distance - 1)) / 10);
-    return this.attack;
+    this.baseattack = Math.round(this.attack - (this.attack * (this.distance - 1)) / 10);
+    return this.baseattack;
   }
 
   set attacker(va) {
