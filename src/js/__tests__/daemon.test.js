@@ -17,9 +17,8 @@ test('creation daemon', () => {
 
 test('distant stoned attack', () => {
   const hero = new Daemon('Mimi');
-  hero.distance = 3;
+  hero.distance = 2;
   hero.stoned = true;
-  hero.attacker;
   expect(hero.strike).toBe(8);
 });
 

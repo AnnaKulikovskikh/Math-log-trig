@@ -11,19 +11,20 @@ export default class MathChar extends Character {
     return this.state;
   }
 
-  set stoned(boo) {
-    this.state = true;
+  set stoned(state) {
+    this.state = state;
   }
 
-  get attacker() {
+  get strike() {
     if (this.state) {
-      this.strike = Math.round(this.attack - Math.log2(5));
+      this.striking = Math.round(this.attack - Math.log2(5));
+      return this.striking;
     }
-    this.strike = Math.round(this.attack - (this.attack * (this.distance - 1)) / 10);
-    return this.strike;
+    this.striking = Math.round(this.attack - (this.attack * (this.distance - 1)) / 10);
+    return this.striking;
   }
 
-  set attacker(va) {
-    this.strike = this.attack;
+  set strike(attack) {
+    this.striking = attack;
   }
 }

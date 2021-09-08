@@ -17,7 +17,6 @@ test('creation magician', () => {
 
 test('distant attack', () => {
   const hero = new Magician('Strange');
-  hero.distance = 3;
-  hero.attacker;
-  expect(hero.strike).toBe(8);
+  hero.distance = 2;
+  expect(hero.strike).toBe(9);
 });
